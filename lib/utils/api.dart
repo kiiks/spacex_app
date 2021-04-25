@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:spaceX_app/Model/company_info.dart';
 import 'package:spaceX_app/Model/landpad.dart';
 import '../Model/launch.dart';
 
@@ -33,6 +34,13 @@ class ApiManager {
     return landpads;
   }
 
+  Future<CompanyInfo> loadCompanyInfo() async {
+    var json = await _getCompanyInfo();
+    CompanyInfo info;
+    info = CompanyInfo.fromJson(json);
+    return info;
+  }
+
   Future<dynamic> _getUpcomingLaunches() async {
     try {
       var response = await dio.get(_baseURl + "/launches/upcoming");
@@ -54,6 +62,15 @@ class ApiManager {
   Future<dynamic> _getLandpads() async {
     try {
       var response = await dio.get(_baseURl + "/landpads");
+      return response.data;
+    } catch (e) {
+      print("Erreur: $e");
+    }
+  }
+
+  Future<dynamic> _getCompanyInfo() async {
+    try {
+      var response = await dio.get(_baseURl + "/company");
       return response.data;
     } catch (e) {
       print("Erreur: $e");

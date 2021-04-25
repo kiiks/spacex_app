@@ -1,16 +1,14 @@
-# spaceX_app
+# Space_X App
 
-A new Flutter project.
+## Features implémenté
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- :white_check_mark: Une vue d’accueil avec liste des lancements prévus, un header mettant en avant le prochain lancement avec un timer en jours / heures / minutes / secondes
+- :white_check_mark: Vue de détail d’un lancement
+- :white_check_mark: Historique des lancements passés
+- :white_check_mark: Carte avec les sites de lancement
+  - Bug => Semble fonctionner sur iOS mais pas Android
+- :white_check_mark: Mise en favoris des lancements
+- :white_check_mark: Notifications push (reminder de lancement) avec écran de paramètre pour les configurer
+  - Implémenté et testé sur Android
+- :white_check_mark: Onglet info sur SpaceX
+- :x: Une autre fonctionnalité de votre choix
